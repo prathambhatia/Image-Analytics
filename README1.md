@@ -71,9 +71,13 @@ Function to judge model performance. They are as follows: Accuracy Metrics, Prob
 
 Q1C. Explain Keras.
 •	Keras is a high-level, deep learning API developed by Google for implementing neural networks. It is written in Python and is used to make the implementation of neural networks easy. It also supports multiple backend neural network computation. Keras is relatively easy to learn and work with because it provides a python frontend with a high level of abstraction while having the option of multiple back-ends for computation purposes. This makes Keras slower than other deep learning frameworks, but extremely beginner-friendly.
+
 •	Keras allows you to switch between different back ends.
+
 •	Out of these five frameworks, TensorFlow has adopted Eras as its official high-level API.
+
 •	Keras is embedded in TensorFlow and can be used to perform deep learning fast as it provides inbuilt modules for all neural network computations.
+
 •	At the same time, computation involving tensors, computation graphs, sessions, etc can be custom made using the TensorFlow Core API, which gives you total flexibility and control over your application and lets you implement your ideas in a relatively short time.
  
 Q1D. Explain Python Image Library.
