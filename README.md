@@ -1,10 +1,4 @@
 # Image-Analytics
-Image & Video Analytics Question Bank
-
-
- 
-
-
 Q1A. Explain Support Vector Machine.
  
 Set 1
@@ -50,21 +44,28 @@ Neural Networks can be of 3 types as follows:
 Some of the important terminologies associated to neural networks are as follows:
 •	Sequential
 ML model that sequences input/output of data. Example: Audio Streams, sound clips & time series data
+
 •	Flatten
 Connects 2D arrays from pooled feature maps into a continuous long array. The flattened matrix is fed as input to fully connected layer to classify the image.
+
 •	Normalize
 Normalize data to obtain mean close to 0. Speeds up learning and leads to faster convergence.
+
 •	Layers
 There are 4 types of layers as follows: Fully Connected Layer, Convolution Layer, Deconvolution Layer & Recurrent Layer.
  
 •	Activation Functions
 Decides whether a neuron can be activated or not.
+
 •	Feed Forward
 Flow of info in forward direction.
+
 •	Back Propagation
 Weights of network connections are repeated by adjusting to minimize the difference between the actual and desired output.
+
 •	Loss Function
 Prediction of error of neural networks. The types of loss functions are as follows: Mean Square Error, Binary CrossEntropy, Categorical CrossEntropy & Sparse Categorical CrossEntropy.
+
 •	Metrics
 Function to judge model performance. They are as follows: Accuracy Metrics, Probabilistic Metrics, Regression Metrics & Image Segmentation Metrics.
  
@@ -81,6 +82,7 @@ Q1C. Explain Keras.
 •	At the same time, computation involving tensors, computation graphs, sessions, etc can be custom made using the TensorFlow Core API, which gives you total flexibility and control over your application and lets you implement your ideas in a relatively short time.
  
 Q1D. Explain Python Image Library.
+
 PIL stands for Python Image Library. It is another library for Image processing and filtering and it is a free and open-source additional library for the python programming language. PIL adds support to opening, manipulating and saving files into many different formats. PIL offers several standard procedures for image manipulations like:
 1.	Pre-pixel manipulations
 2.	Masking & Transparency Handling
@@ -120,6 +122,9 @@ Q2A. Explain any 2 Image Processing Algorithms. The Image Processing Algorithms 
 
 •	In practice, it is best to take advantage of the Gaussian blur’s separable property by dividing the process into two passes. In the first pass, a one-dimensional kernel is used to blur the image in only the horizontal or vertical direction. In the second pass, the same one-dimensional kernel is used to blur in the remaining direction. The resulting effect is the same as convolving with a two-dimensional kernel in a single pass. Let’s see an example to understand what gaussian filters do to an image.
 
+
+•	Syntax: img.filter(ImageFilter.GaussianBlur)
+
 •	EDGE DETECTION
 •	Finds boundaries of objects within images
 •	Works by its discontinuities in brightness
@@ -132,20 +137,6 @@ Q2A. Explain any 2 Image Processing Algorithms. The Image Processing Algorithms 
 •	Fourier Transform Image Processing
 •	Wavelet Image Processing
  
-Q2B. Explain Gaussian Image Processing Algorithm. Mention the syntax.
-GAUSSIAN IMAGE PROCESSING
-•	Gaussian blur which is also known as gaussian smoothing, is the result of blurring an image by a Gaussian function.
-•	It is used to reduce image noise and reduce details. The visual effect of this blurring technique is similar to looking at an image through the translucent screen. It is sometimes used in computer vision for image enhancement at different scales or as a data augmentation technique in deep learning.
-•	Formula:
-
-
-
-•	In practice, it is best to take advantage of the Gaussian blur’s separable property by dividing the process into two passes. In the first pass, a one-dimensional kernel is used to blur the image in only the horizontal or vertical direction. In the second pass, the same one- dimensional kernel is used to blur in the remaining direction. The resulting effect is the same as convolving with a two-dimensional kernel in a single pass. Let’s see an example to understand what gaussian filters do to an image.
-
-•	Syntax: img.filter(ImageFilter.GaussianBlur)
-
-
-Q2C. Explain PIL. Mention Any two operations of PIL with code. Ans. Same as Set 1 Q1D.
  
 Q2D. Explain Open CV.
 -	OPENCV stands for Open-Source Computer Vision.
@@ -178,13 +169,21 @@ In order to access the library syntax is: Import cv2
  
 Q3A. Explain KNN. Mention the syntax and the library used for KNN. How is the value of “K”
 decided? What value of K is ideal?
+
 •	K-Nearest Neighbour is one of the simplest Machine Learning algorithms based on Supervised Learning technique.
+
 •	K-NN algorithm assumes the similarity between the new case/data and available cases and put the new case into the category that is most similar to the available categories.
+
 •	K-NN algorithm stores all the available data and classifies a new data point based on the similarity. This means when new data appears then it can be easily classified into a well suite category by using K- NN algorithm.
+
 •	K-NN algorithm can be used for Regression as well as for Classification but mostly it is used for the Classification problems.
+
 •	K-NN is a non-parametric algorithm, which means it does not make any assumption on underlying data.
+
 •	It is also called a lazy learner algorithm because it does not learn from the training set immediately instead it stores the dataset and at the time of classification, it performs an action on the dataset.
+
 •	KNN algorithm at the training phase just stores the dataset and when it gets new data, then it classifies that data into a category that is much similar to the new data.
+
 •	Example: Suppose, we have an image of a creature that looks similar to cat and dog, but we want to know either it is a cat or dog. So, for this identification, we can use the KNN algorithm, as it works on a similarity measure. Our KNN model will find the similar features of the new data set to the cat and dog images and based on the most similar features it will put it in either cat or dog category.
 
 The syntax for KNN is as follows:
@@ -194,6 +193,7 @@ The value of K is decided as follows:
 K is usually decided by finding the square root of N, where N is the total number of samples. The square root of N is usually the ideal value for K.
  
 Q3B. Explain Object Detection.
+
 -	Object detection is a computer technology related to computer vision and image processing that deals with detecting instances of semantic objects of a certain class (such as humans, buildings, or cars) in digital images and videos.
 -	Well-researched domains of object detection include face detection and pedestrian detection. Object detection has applications in many areas of computer vision, including image retrieval and video surveillance.
 -	It is also used in tracking objects, for example tracking a ball during a football match, tracking movement of a cricket bat, or tracking a person in a video.
@@ -218,9 +218,13 @@ Q3B. Explain Object Detection.
 ◦	Deformable convolutional networks
  
 Q3C. Explain Fine Tuning.
+
 •	Fine-tuning is a technique of model reusability in addition to feature extraction.
+
 •	Fine-tuning consists of unfreezing few of the top layers of the frozen model base in neural network used for feature extraction and jointly training both the newly added part of the model (for example, a fully connected classifier) and the top layers.
+
 •	This technique is called fine-tuning as it slightly adjusts the more abstract representations of fine-tuning model being reused so that it can be made more relevant for the problem at hand.
+
 •	Only the top layers of the convolutional base are possible to be fine-tune once the classifier on top has already been trained because to be able to train a randomly initialized classifier, freezing of pretrained convnets like VGG16 should have to done.
 
 -Steps to fine-tune a network are as follows:
@@ -233,26 +237,36 @@ Q3C. Explain Fine Tuning.
 •	It is useful to fine-tune more specialized features as these are the ones that need to be repurposed on the new problem. Fast-decreasing returns in fine-tuning lower layers will occur.
  
 Q3D. Explain Feature Extraction.
+
 -Feature extraction is a part of the dimensionality reduction process, in which, an initial set of the raw data is divided and reduced to more manageable groups.
 -The most important characteristic of these large data sets is that they have a large number of variables. These variables require a lot of computing resources to process.
+
 -So, feature extraction helps to get the best feature from those big data sets by selecting and combining variables into features, thus, effectively reducing the amount of data.
+
 -These features are easy to process, but still able to describe the actual data set with accuracy and originality.
+
 -The technique of extracting the features is useful when you have a large data set and need to reduce the number of resources without losing any important or relevant information.
+
 -Feature extraction helps to reduce the amount of redundant data from the data set.
+
 -The reduction of the data helps to build the model with less machine effort and also increases the speed of learning and generalisation steps in the machine learning process.
 
 Applications
 -Bag of Words
+
 Bag of Words is the most used technique for natural language processing. In this process they extract the words or the features from a sentence, document, website, etc. and then they classify them into the frequency of use. So, in this whole process feature extraction is one of the most important parts.
 
 -Image Processing
+
 Image processing is one of the best and most interesting domain. In this domain basically you will start playing with your images in order to understand them. So, here we use many techniques which includes feature extraction as well and algorithms to detect features such as shaped, edges, or motion in a digital image or video to process them.
 
 -Auto-encoders
+
 The main purpose of the auto-encoders is efficient data coding which is unsupervised in nature. this process comes under unsupervised learning. So, feature
 extraction procedure is applicable here to identify the key features from the data to code by learning from the coding of the original data set to derive new ones.
  
 Q4A. Suppose you were to run MNIST Data set, answer the below questions
+
 i)	Mention the libraries which will be used.
 ii)	Is there a need for using Neural Networks?
 iii)	Provide a step wise flow for running the MNIST Dataset.
@@ -264,31 +278,50 @@ The libraries which will be used are TensorFlow for the actual analysis and pand
 Yes, neural networks are necessary for using the MNIST dataset.
 
 The step wise flow for running the MNIST dataset is given as follows:
+
 •	Importing the dataset from the TensorFlow library.
+
 •	Dividing into train and test.
+
 •	Normalizing the values.
+
 •	Modelling the data, converting to sequential format, flattening the data array, making the data dense using the relu and SoftMax functions.
 •	Compiling the model with the optimizer, loss and metric arguments.
+
 •	Fitting the model.
+
 •	Validating and saving the function.
 
 The TensorFlow library is important for the MNIST dataset.
+
 The syntax to normalise the data is as follows: tf.keras.utils.normalize(data)
  
 Q5A. Explain the below code. Explain the flow of the code, functions and activation functions model = tf.keras.models.Sequential()
 model.add(tf.keras.layers.Flatten()) model.add(tf.keras.layers.Dense(128, tf.nn.relu)) model.add(tf.keras.layers.Dense(128, tf.nn.relu)) model.add(tf.keras.layers.Dense(10, tf.nn.softmax))
 
-A sequential model, as the name suggests, allows you to create models layer-by-layer in a step- by-step fashion. The first line of the code converts the model into a sequential format. The second line flattens the data array i.e., it converts 2D array into 1D continuous array by unrolling the values beginning at the last dimension. It is used to reshape the tensor to have a shape that is equal to the number of elements contained in the tensor. The third, fourth and fifth lines are used to add dense layers to the model using the dense activation function. Relu is used in hidden layer to avoid vanishing gradient problem and better computation performance, and SoftMax function is used in the last output layer.
+A sequential model, as the name suggests, allows you to create models layer-by-layer in a step- by-step fashion.
+
+The first line of the code converts the model into a sequential format. 
+
+The second line flattens the data array i.e., it converts 2D array into 1D continuous array by unrolling the values beginning at the last dimension. It is used to reshape the tensor to have a shape that is equal to the number of elements contained in the tensor.
+
+The third, fourth and fifth lines are used to add dense layers to the model using the dense activation function. Relu is used in hidden layer to avoid vanishing gradient problem and better computation performance, and SoftMax function is used in the last output layer.
  
 Q5B. Fill in the details for the below mentioned code:
+
 model.compile(optimiser = ‘adam’, loss_function = ‘sparse_categorical_crossentropy’, metrics
 = [‘accuracy’]
 Explain each parameter.
 
 
-Adam optimizer involves a combination of two gradient descent methodologies: Momentum
+Adam optimizer involves a combination of two gradient descent methodologies:
+
+Momentum
+
 This algorithm is used to accelerate the gradient descent algorithm by taking into consideration the 'exponentially weighted average' of the gradients. Using averages makes the algorithm converge towards the minima in a faster pace.
+
 Root Mean Square Propagation (RMSP)
+
 Root mean square prop or RMSprop is an adaptive learning algorithm that tries to improve AdaGrad. Instead of taking the cumulative sum of squared gradients like in AdaGrad, it takes the ‘exponential moving average’.
 
 
@@ -299,60 +332,59 @@ The accuracy metric is used to calculate the accuracy. It calculates how often p
  
 Set 2
 
-
-Q1A. Explain Edge Detection with syntax.
-•	Finds boundaries of objects within images.
-•	Works by its discontinuities in brightness.
-•	Most of shape information is enclosed in edges, hence beneficial for extracting useful information.
-•	Can rapidly react if some noise is detected in image while detecting variations of grey levels. Edges are defined as local maxima of grey levels.
-•	Common edge algorithm is Sobel Edge Detection Algorithm. Syntax: img.filter(ImageFilter.FIND_EDGES)
-
-Q1B. Explain Gaussian Image Processing. Same as Set 1 Q2B.
- 
 *Q1C. Explain Random Forest.
 Random forest, like its name implies, consists of many individual decision trees that operate as an ensemble. Each individual tree in the random forest spits out a class prediction and the class with the most votes becomes our model’s prediction i.e., random forests or random decision forests is an ensemble learning method for classification, regression and other tasks that operates by constructing a multitude of decision trees at training time. For classification tasks, the output of the random forest is the class selected by most trees. For regression tasks, the mean or average prediction of the individual trees is returned. Random decision forests correct for decision trees' habit of overfitting to their training set. Random forests generally outperform decision trees, but their accuracy is lower than gradient boosted trees. However, data characteristics can affect their performance. Random forests are frequently used as "Blackbox" models in businesses, as they generate reasonable predictions across a wide range of data while requiring little configuration.
 
 
-Q1D. Fill in the details for the below mentioned code: 5
-model.compile(optimiser = ‘		’, loss_function = ‘	’, metrics = [‘	’]
-Same as Set 1 Q5B.
-
-Q2A. Explain KNN with syntax. Same as Set 1 Q3A.
  
 *Q2B. Explain TensorFlow.
-TensorFlow is a free and open-source software library for machine learning and artificial intelligence. It can be used across a range of tasks but has a particular focus
-on training and inference of deep neural networks. It is a Python-friendly open-source library for numerical computation that makes machine learning and developing neural networks faster and easier. Created by the Google Brain team and initially released to the public in 2015, TensorFlow is an open-source library for numerical computation and large-scale machine learning. TensorFlow bundles together a slew of machine learning and deep learning models and algorithms (aka neural networks) and makes them useful by way of common programmatic metaphors. It uses Python or JavaScript to provide a convenient front-end API for building applications, while executing those applications in high-performance C++.
+
+TensorFlow is a free and open-source software library for machine learning and artificial intelligence. It can be used across a range of tasks but has a particular focus on training and inference of deep neural networks. 
+
+It is a Python-friendly open-source library for numerical computation that makes machine learning and developing neural networks faster and easier. Created by the Google Brain team and initially released to the public in 2015, TensorFlow is an open-source library for numerical computation and large-scale machine learning. 
+
+TensorFlow bundles together a slew of machine learning and deep learning models and algorithms (aka neural networks) and makes them useful by way of common programmatic metaphors. 
+
+It uses Python or JavaScript to provide a convenient front-end API for building applications, while executing those applications in high-performance C++.
+
 TensorFlow allows developers to create dataflow graphs—structures that describe how data moves through a graph, or a series of processing nodes. Each node in the graph represents a mathematical operation, and each connection or edge between nodes is a multidimensional data array, or tensor.
 
 
-Q2C. Explain Python Image Library and provide an example to crop an image. Same as Set 1 Q1D.
-
-Q2D. Explain CV2 mention the syntax to install open cv. Same as Set 1 Q2D.
  
 *Q3A. Explain Tesseract and provide the flow for OCR.
 
-Tesseract is an open-source text recognition (OCR) Engine, available under the Apache 2.0 license. It can be used directly, or (for programmers) using an API to extract printed text from images. It supports a wide variety of languages. Tesseract does not have a built-in GUI, but there are several available from the 3rdParty page. Tesseract is compatible with many programming languages and frameworks through wrappers that can be found here. It can be used with the existing layout analysis to recognize text within a large document, or it can be used in conjunction with an external text detector to recognize text from an image of a single text line. Tesseract 4.00 includes a new neural network subsystem configured as a text line recognizer. It has its origins in OCRopus' Python-based LSTM implementation but has been redesigned for Tesseract in C++. The neural network system in Tesseract pre-dates TensorFlow but is compatible with it, as there is a network description language called Variable Graph Specification Language (VGSL), that is also available for TensorFlow. To recognize an image containing a single character, we typically use a Convolutional Neural Network (CNN). Text of arbitrary length is a sequence of characters, and such problems are solved using RNNs and LSTM is a popular form of RNN. Read this post to learn more about LSTM.
+Tesseract is an open-source text recognition (OCR) Engine, available under the Apache 2.0 license. It can be used directly, or (for programmers) using an API to extract printed text from images. 
+
+It supports a wide variety of languages. Tesseract does not have a built-in GUI, but there are several available from the 3rdParty page. Tesseract is compatible with many programming languages and frameworks through wrappers that can be found here.
+
+It can be used with the existing layout analysis to recognize text within a large document, or it can be used in conjunction with an external text detector to recognize text from an image of a single text line. 
+
+Tesseract 4.00 includes a new neural network subsystem configured as a text line recognizer. It has its origins in OCRopus' Python-based LSTM implementation but has been redesigned for Tesseract in C++. The neural network system in Tesseract pre-dates TensorFlow but is compatible with it, as there is a network description language called Variable Graph Specification Language (VGSL), that is also available for TensorFlow.
+
+To recognize an image containing a single character, we typically use a Convolutional Neural Network (CNN). Text of arbitrary length is a sequence of characters, and such problems are solved using RNNs and LSTM is a popular form of RNN. Read this post to learn more about LSTM.
 
 The flow for OCR is as follows: Capture Image, Save Image, Adaptive Thresholding, Identifying Foreground Pixels, Segment in Blobs, Filter Blobs, Estimating Base Lines, Merge Blobs into Lines, Find Fixed Pitch, Chop Words into Characters, Measure Gaps into Characters, Identify Outlines, Apply Classifier, Match with Prototype and Recognizing Characters.
 
 
-
-Q3B. Explain Support Vector Machine. Same as Set 1 Q1A.
-
-
-Q3C. Explain Keras. Same as Set 1 Q1C.
  
 *Q3D. Write a short note on activation functions for neural networks.
 
-Activation function decides whether a neuron should be activated or not by calculating weighted sum and further adding bias with it. The purpose of the activation function is
-to introduce non-linearity into the output of a neuron. We know, neural network has neurons that work in correspondence of weight, bias, and their respective activation function. In a neural network, we would update the weights and biases of the neurons based on the error at the output. This process is known as back-propagation. Activation functions make the back- propagation possible since the gradients are supplied along with the error to update the weights and biases. A neural network without an activation function is essentially just a linear regression model. The activation function does the non-linear transformation to the input making it capable to learn and perform more complex tasks.
+Activation function decides whether a neuron should be activated or not by calculating weighted sum and further adding bias with it. The purpose of the activation function is to introduce non-linearity into the output of a neuron. 
+
+We know, neural network has neurons that work in correspondence of weight, bias, and their respective activation function. In a neural network, we would update the weights and biases of the neurons based on the error at the output.
+
+This process is known as back-propagation. Activation functions make the back- propagation possible since the gradients are supplied along with the error to update the weights and biases. A neural network without an activation function is essentially just a linear regression model. The activation function does the non-linear transformation to the input making it capable to learn and perform more complex tasks.
 
 Some of the activation functions are given below:
 
 •	ReLU (Rectified Linear Unit) Activation Function
+
 •	Leaky ReLU
+
 •	SoftMax Activation Function
+
 •	Linear Activation Function
+
 •	Non-Linear Activation Function
  
 Q4. Consider the Cat Dog Classifier Dataset
@@ -374,44 +406,7 @@ Flatten(),
 Dense(64, activation = 'relu'), Dense(1, activation = 'sigmoid')])
 A sequential model, as the name suggests, allows you to create models layer-by-layer in a step- by-step fashion. The first line of the code converts the model into a sequential format. The second line. The Conv2D layer creates a convolution kernel that is convolved with the layer input to produce a tensor of outputs. If use_bias is True, a bias vector is created and added to the outputs. Finally, if activation is not None, it is applied to the outputs as well. The Relu activation function is used in hidden layer to avoid vanishing gradient problem and better computation performance. The specified input shape function reshapes the data or provides the shape of the input data. The maxpooling2D function down samples the input along its spatial dimensions (height and width) by taking the maximum value over an input window (of size defined by pool_size) for each channel of the input. The window is shifted by strides along each dimension. The sixth line flattens the data array i.e., it converts 2D array into 1D continuous array by unrolling the values beginning at the last dimension. It is used to reshape the tensor to have a shape that is equal to the number of elements contained in the tensor. The seventh and eight lines are used to add dense layers to the model using the dense activation function. The activation functions used are relu and sigmoid.
  
-Set 3
 
-Q1A. Explain Edge Detection with syntax. Same as Set 2 Q1A.
-
-
-Q1B. Explain Gaussian Image Processing. Same as Set 1 Q2B.
-
-
-Q1C. Explain Random Forest. Same as Set 2 Q1C.
-
-
-Q1D. Fill in the details for the below mentioned code: 5
-model.compile(optimiser = ‘		’, loss_function = ‘	’, metrics = [‘	’]
-Same as Set 1 Q5B.
-
-
-
-Q2A. Explain any 2 Image Processing Algorithms. Same as Set 1 Q2A.
-
-
-Q2B. Explain Gaussian Image Processing Algorithm. Mention the syntax. Same as Set 1 Q2B.
-
-
-Q2C. Explain PIL. Mention any 2 operations of PIL with code. Same as Set 1 Q1D.
-
-
-Q2D. Explain Open CV. Same as Set 1 Q2D.
- 
-Q3A. Explain KNN. Same as Set 1 Q3A.
-
-
-Q3B. Explain Support Vector Machine. Same as Set 1 Q1A.
-
-
-Q3C. Explain Random Forest. Same as Set 2 Q1C.
-
-
-Q3D. Explain various PIL functions with syntaxes. Same as Set 1 Q1D.
  
 *Q4. Explain the below mentioned functions of neural networks.
 
