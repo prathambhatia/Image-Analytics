@@ -416,44 +416,56 @@ ii)	Loss Function (Enlist and explain any 2)
 
 iii)	Explain Normalisation of images. Why do we need it?
 
-Activation function decides whether a neuron should be activated or not by calculating weighted sum and further adding bias with it. The purpose of the activation function is
-to introduce non-linearity into the output of a neuron. We know, neural network has neurons that work in correspondence of weight, bias, and their respective activation function. In a neural network, we would update the weights and biases of the neurons based on the error at the output. This process is known as back-propagation. Activation functions make the back- propagation possible since the gradients are supplied along with the error to update the weights and biases. A neural network without an activation function is essentially just a linear regression model. The activation function does the non-linear transformation to the input making it capable to learn and perform more complex tasks.
+Activation function decides whether a neuron should be activated or not by calculating weighted sum and further adding bias with it. The purpose of the activation function is to introduce non-linearity into the output of a neuron. We know, neural network has neurons that work in correspondence of weight, bias, and their respective activation function. In a neural network, we would update the weights and biases of the neurons based on the error at the output. This process is known as back-propagation. Activation functions make the back- propagation possible since the gradients are supplied along with the error to update the weights and biases. A neural network without an activation function is essentially just a linear regression model. The activation function does the non-linear transformation to the input making it capable to learn and perform more complex tasks.
 
 Some of the activation functions are given below:
 
 •	ReLU (Rectified Linear Unit) Activation Function
 The Relu activation function is used in hidden layer to avoid vanishing gradient problem and better computation performance.
+
 •	SoftMax Activation Function
 The softmax, or “soft max,” mathematical function can be thought to be a probabilistic or “softer” version of the argmax function. The softmax function is used as the activation function in the output layer of neural network models that predict a multinomial probability distribution. That is, softmax is used as the activation function for multi-class classification problems where class membership is required on more than two class labels.
 
 
 A loss function is a function that compares the target and predicted output values; measures how well the neural network models the training data. When training, we aim to minimize this loss between the predicted and target outputs. The hyperparameters are adjusted to minimize the average loss. Some of the loss functions are listed as below:
+
 •	Mean Squared Error
 MSE loss is used for regression tasks. As the name suggests, this loss is calculated by taking the mean of squared differences between actual(target) and predicted values.
+
 •	Binary Cross Entropy
 BCE loss is used for the binary classification tasks. If you are using BCE loss function, you just need one output node to classify the data into two classes. The output value should be passed through a sigmoid activation function and the range of output is (0 – 1).
  
 Image normalization is a process, often used in the preparation of data sets for artificial intelligence (AI), in which multiple images are put into a common statistical distribution in terms of size and pixel values; however, a single image can also be normalized within itself. The process usually includes both spatial and intensity normalization. The point from normalization comes behind calibrating the different pixels intensities into a normal distribution which makes the image looks better for the visualizer. Main purpose of normalization is to make computation efficient by reducing values between 0 to 1. This also makes the images easier to analyse.
  
 Q5. Fill in the details for the below mentioned code: 15
+
 Consider the data set for cat dog classifier, mention the steps for classification of cats/dogs images.
+
 i)	Mention necessary libraries.
+
 The necessary libraries are numpy, pandas, random, matplotlib, tensorflow and keras (Sequential from keras.models and Conv2D, MaxPooling2D, Flatten, Dense from keras.layers)
 
 ii)	from google.colab import drive drive.mount('/content/drive')
 
 iii)	Read the data using numpy arrays
+
 X_train =(a)np.loadtxt(‘/content/drive/MyDrive/Cat Dog Classification/input.csv', (b)delimiter = ',')
+
 Y_train =np.loadtxt(‘/content/drive/MyDrive/Cat Dog Classification/labels.csv',
 delimiter= ',')
+
 X_test =np.loadtxt(‘/content/drive/MyDrive/Cat Dog Classification/input_test.csv',
 delimiter= ',')
+
 Y_test =np.loadtxt(‘/content/drive/MyDrive/Cat Dog Classification/labels_test.csv',
 delimiter = ',')
+
 Mention what is (a) and (b)
+
 a = np.loadtxt & b = delimiter
 
 iv)	Can the image data be normalised used normalise function only? If No, mention another method for it.
+
 No, the image data can be normalised using other functions too. For one, it can be normalised by dividing the data by 255.
 
 v)	model = Sequential([
@@ -462,9 +474,11 @@ Conv2D(32,(3,3),activation =(b)relu), MaxPooling2D((2,2)),
 Flatten(),
 Dense(64, activation = (c)relu), Dense(1, activation = (d)sigmoid)
 ])
+
 Mention (a),(b),(c) and (d) a, b, c = relu & d = sigmoid
 
 vi)	model.compile(optimizer = ‘(a)adam’, loss = ‘(b)binary_crossentropy, metrics= ['accuracy'])
+
 Mention (a) and (b)
 a = adam, b = binary_crossentropy
 
